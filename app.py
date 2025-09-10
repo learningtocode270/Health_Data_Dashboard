@@ -19,7 +19,7 @@ htn_df = htn_df[['YearStart', 'YearEnd', 'Sex', 'Age Group', 'Percent', 'Measure
 print("Unique measures:", htn_df['Measure'].unique())
 
 #filter for male and female only
-sex_df = htn[htn['Sex'].isin(['Male', 'Female'])]
+sex_df = htn_df[htn_df['Sex'].isin(['Male', 'Female'])]
 
 #pivot so rows are years, columns are sex, values are prevalence
 pivot_df = sex_df.pivot_table(
